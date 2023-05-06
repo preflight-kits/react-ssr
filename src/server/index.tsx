@@ -1,7 +1,12 @@
+import dotEnv from "dotenv";
 import express, { Request, Response } from "express";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import { App } from "App";
+import { getVersion } from "./utils/getVersion";
+
+// init env variables
+dotEnv.config();
 
 const app = express();
 
@@ -20,6 +25,7 @@ app.get("*", (req: Request, res: Response) => {
 
   res.render("app", {
     markup: html,
+    version: getVersion(),
   });
 });
 
