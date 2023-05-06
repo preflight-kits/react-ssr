@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
-import { App } from "../client/App";
+import { App } from "App";
 
 const app = express();
 

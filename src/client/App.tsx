@@ -1,4 +1,4 @@
-import { RouterProvider } from "./config/router";
+import { RouterProvider } from "config/router";
 
 export const App: React.FC = () => {
   return (
